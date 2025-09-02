@@ -1,0 +1,39 @@
+.shiny-check {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    left: auto;
+    bottom: auto;
+    z-index: 6;
+
+    padding: 8px 16px;
+    border-radius: 5px !important;
+    cursor: pointer;
+    color: black !important;
+    
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.shiny-check:hover {
+    transform: scale(1.03) !important;
+}
+
+.shiny-check.checked {
+  background: linear-gradient(
+    145deg,
+    #4a6eff 0%,
+    #6f8cff 40%,
+    #a8c1ff 60%,  
+    #4a6eff 100%
+
+  ) !important;
+  color: white;
+  box-shadow: 0 0 10px rgba(60, 90, 166, 0.6);
+}
