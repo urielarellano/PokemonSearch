@@ -3,8 +3,10 @@ import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import './Home.css';
 import Dropdown from '../components/Dropdown';
-import { Pokemon } from '../types/Pokemon';
 import PokeGrid from '../components/PokeGrid';
+import MobileHeader from '../components/MobileHeader';
+import { Pokemon } from '../types/Pokemon';
+
 import { getPokemon } from '../services/getPokemon';
 
 function Home() {
@@ -147,10 +149,12 @@ function Home() {
         <div className="home">
             
             <h1>The Best Pokémon Search Website on the Motherf*ckin Internet</h1>
+            <h2>Click a Pokemon card to see detailed info</h2>
             <div className="search-gallery-buttons">
                 <button className="to-gallery" onClick={goToGallery}>Gallery</button>
             </div>
             <br />
+            
             <form className="search" onSubmit={handleSearchSubmit}>
                 <input ref={searchRef} 
                     type="search" 
@@ -185,6 +189,7 @@ function Home() {
                     </label>
                 </div>
             </div>
+            <MobileHeader/>
             
             <br />
             <PokeGrid pokemons={pokeArray} checked={showShiny} setChecked={setShowShiny} />

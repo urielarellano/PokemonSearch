@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Pokemon } from '../types/Pokemon';
 import { Stats } from '../types/Pokemon';
 import './DetailedView.css';
+import './MobileDetailedView.css';
 import { getPokemon } from '../services/getPokemon';
 
 
@@ -84,7 +85,7 @@ function DetailedView() {
                 <h1 className="pokemon-name">{pokemon.name} (#{pokemon.id})</h1>
 
                 <div className="detail-images">
-                    <div>
+                    <div className="detail-art-container">
                         <img
                             className="detail-artwork"
                             src={pokemon.artwork}
@@ -96,7 +97,7 @@ function DetailedView() {
                             alt={`${pokemon.name} shiny artwork`}
                         />
                     </div>
-                    <div>
+                    <div className="sprite-container">
                         <img
                             className="detail-sprite"
                             src={pokemon.sprite}

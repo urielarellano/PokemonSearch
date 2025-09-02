@@ -37,3 +37,16 @@
   color: white;
   box-shadow: 0 0 10px rgba(60, 90, 166, 0.6);
 }
+
+@media (max-width: 500px) {
+  .shiny-check {
+    top: 7px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000 #555 #555 #000; /* top right bottom left */
+    font-weight: 400;
+    padding: 6px 10px;
+    margin: 0;
+    z-index: 10;
+  }
+}

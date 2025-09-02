@@ -78,7 +78,6 @@
 
 /* Stat list container */
 .stats-list {
-
   list-style: none;
   padding: 0;
   margin: 0;
@@ -133,11 +132,10 @@
 /* Responsive tweaks for small screens */
 @media (max-width: 500px) {
   .pokeGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
   }
   
   .sprite img {
-    height: 140px;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
   }
@@ -147,7 +145,26 @@
     flex-direction: column;
   }
 
+  .stats-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .stats-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0px !important;
+    margin-bottom: 1px !important;
+  }
+  .stat-bar-container {
+    width: 100%;
+    height: 2em;
+  }
   .stat-bar-fill {
     font-size: 0.7em;
+    height: 1.5em;
   }
 } 

@@ -25,7 +25,12 @@ body {
     max-width: 45vw;
     margin-bottom: 10px;
 }
-
+.home h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+ 
 .to-gallery {
     border-radius: 5px;
     padding: 6px 10px;
@@ -71,12 +76,37 @@ body {
     align-items: center;
     gap: 3px;
 }
+.black-background {
+    display: none;
+}
 
 @media (max-width: 500px) {
     .home h1 {
         max-width: 95%;
+        margin-top: 50px;
+    }
+
+    .to-gallery {
+        position: fixed;
+        top: 7px;
+        left: 5px;
+        margin: 0px;
+        z-index: 10;
     }
     .search {
-        width: 60%;
+        width: 58%;
+        position: sticky;
+        top: 7px;
+        padding: 0px 10px;
+        z-index: 6;
+        transform: translateX(-4px);
     }
+    .sort-results {
+        position: sticky;
+        width: 90vw;
+        top: 50px;
+        z-index: 6;
+    }
+
+
 }

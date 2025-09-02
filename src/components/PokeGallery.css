@@ -32,3 +32,12 @@
     background: #637395;
     z-index: 2;
 }
+
+@media (max-width: 500px) {
+  .poke-gallery {
+    padding: 2px;
+  }
+  .artwork {
+    max-height: 190px;
+  }
+}
